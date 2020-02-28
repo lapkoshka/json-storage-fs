@@ -3,7 +3,7 @@ const fs = require('fs');
 let STORAGE_CATALOG = './data';
 let STORAGE_PATH = STORAGE_CATALOG + '/storage.json';
 
-export default class JsonStorage {
+module.exports = class JsonStorage {
     static _open() {
         if (!fs.existsSync(STORAGE_CATALOG)) {
             fs.mkdirSync(STORAGE_CATALOG);

@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Simple key-value storage based on JSON for Node.js",
   "main": "index.js",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loosefer/json-storage.git"
+  },
   "scripts": {
     "test": "node test.js"
   },
