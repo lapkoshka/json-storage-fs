@@ -9,13 +9,13 @@
     "url": "https://github.com/loosefer/json-storage.git"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "key-value",
     "storage",
     "json"
   ],
-  "author": "Loosefer",
-  "license": "ISC"
+  "author": "Loosefer"
 }
