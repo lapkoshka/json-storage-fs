@@ -1,0 +1,16 @@
+{
+  "name": "json-storage",
+  "version": "1.0.0",
+  "description": "Simple key-value storage based on JSON for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "key-value",
+    "storage",
+    "json"
+  ],
+  "author": "Loosefer",
+  "license": "ISC"
+}
