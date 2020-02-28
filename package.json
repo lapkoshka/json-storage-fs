@@ -1,5 +1,5 @@
 {
-  "name": "json-storage",
+  "name": "json-storage-fs",
   "version": "1.0.0",
   "description": "Simple key-value storage based on JSON for Node.js",
   "main": "index.js",

@@ -1,20 +1,20 @@
-# json-storage - Simple key-value storage based on JSON for Node.js
+# json-storage-fs - Simple key-value storage based on JSON for Node.js
 
-[![npm package](https://nodei.co/npm/request.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/request/)
+[![npm package](https://nodei.co/npm/json-storage-fs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/json-storage-fs/)
 
 ## Installation
 ```bash
-$ npm install json-storage
+$ npm install json-storage-fs
 ```
 
 ## Simple to use
 
-json-storage is a very lightweight package with no  dependencies that was designed for small Node.js applications
+json-storage-fs is a very lightweight package with no dependencies that was designed for small Node.js applications
 
 
 Exmaple:
 ```js
-const Storage = require('json-storage');
+const Storage = require('json-storage-fs');
 
 Storage.set('name', 'Alice');
 const name = Storage.get('name');
