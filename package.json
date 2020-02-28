@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loosefer/json-storage.git"
+    "url": "https://github.com/loosefer/json-storage-fs.git"
   },
   "scripts": {
     "test": "node test.js",
