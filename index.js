@@ -60,4 +60,10 @@ module.exports = class JsonStorage {
             throw Error(e);
         }
     }
+
+    static clearAll() {
+        this.getAllKeys().forEach(key => {
+            this.delete(key);
+        });
+    }
 }
