@@ -12,7 +12,7 @@ $ npm install json-storage-fs
 json-storage-fs is a very lightweight package with no dependencies that was designed for small Node.js applications
 
 
-Exmaple:
+Example:
 ```js
 const Storage = require('json-storage-fs');
 
@@ -37,7 +37,7 @@ static set(key: string, data: any): void
 Delete value by key
 
 ```
-static delete(key: string): any
+static delete(key: string): void
 ```
 
 Get all high-level keys
@@ -46,3 +46,8 @@ Get all high-level keys
 static getAllKeys(): string[]
 ```
 
+Clear storage 
+
+```
+static clearAll(): void
+```

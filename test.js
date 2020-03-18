@@ -2,9 +2,7 @@ const fs = require('fs');
 const JsonStorage = require('./index.js');
 
 // clear storage
-JsonStorage.getAllKeys().forEach(key => {
-    JsonStorage.delete(key);
-});
+JsonStorage.clearAll();
 
 // storage should be empty
 const keys = JsonStorage.getAllKeys();
