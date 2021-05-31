@@ -3,7 +3,16 @@ const fs = require('fs');
 let STORAGE_CATALOG = './data';
 let STORAGE_PATH = STORAGE_CATALOG + '/storage.json';
 
-module.exports = class JsonStorage {
+function updateStoragePath() {
+    STORAGE_PATH = STORAGE_CATALOG + '/storage.json'
+}
+
+function config(options) {
+    STORAGE_CATALOG = options.catalog;
+    updateStoragePath();
+}
+
+class JsonStorage {
     static _open() {
         if (!fs.existsSync(STORAGE_CATALOG)) {
             fs.mkdirSync(STORAGE_CATALOG);
@@ -66,4 +75,9 @@ module.exports = class JsonStorage {
             this.delete(key);
         });
     }
+}
+
+module.exports = {
+    JsonStorage,
+    config
 }

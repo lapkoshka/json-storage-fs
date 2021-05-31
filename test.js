@@ -1,5 +1,9 @@
 const fs = require('fs');
-const JsonStorage = require('./index.js');
+const { JsonStorage, config } = require('./index.js');
+
+function remove() {
+    fs.rmdirSync('data', { recursive: true });
+}
 
 // clear storage
 JsonStorage.clearAll();
@@ -27,5 +31,22 @@ JsonStorage.delete('catName');
 if (JsonStorage.get('catName') !== undefined) {
     throw Error('catName should be undefined after deleting');
 }
+
+// check catalog options
+remove();
+
+JsonStorage.set('catName', 'Pushistik');
+if (!fs.existsSync('data/storage.json')) {
+    throw Error('default catalog does not exist');
+}
+
+remove();
+config({ catalog: '/tmp/meow'});
+
+JsonStorage.set('catName', 'Pushistik');
+if (!fs.existsSync('/tmp/meow/storage.json')) {
+    throw Error('default catalog does not exist');
+}
+
 
 console.log('Completed');

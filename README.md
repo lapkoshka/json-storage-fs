@@ -14,10 +14,13 @@ json-storage-fs is a very lightweight package with no dependencies that was desi
 
 Example:
 ```js
-const Storage = require('json-storage-fs');
+const { JsonStorage, config } = require('json-storage-fs');
 
-Storage.set('name', 'Alice');
-const name = Storage.get('name');
+// (optional set catalog path)
+config({ catalog: '/tmp/meow'});
+
+JsonStorage.set('name', 'Alice');
+const name = JsonStorage.get('name');
 console.log(name); // -> 'Alice'
 ```
 
